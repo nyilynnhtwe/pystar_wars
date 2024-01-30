@@ -1,0 +1,88 @@
+About the submission:
+
+
+
+1) The submission should be a zip file containing only the necessary files to run your
+project.
+2) I will run the code on a clean venv Python 3.9.0 generated as :
+
+
+
+stelios➜ ~ ᐅ python3 --version
+Python 3.9.0
+stelios➜ ~ ᐅ python3 -m venv virtualenv-[name]
+stelios➜ ~ ᐅ ls virtualenv-name/bin/activate
+virtualenv-name/bin/activate
+
+
+
+3) Upon extracting the submission, I will run pip -r to install any requirements
+which should be listed in the root of the project in a requirements.txt file.
+4) After installing the requirements I will run a single executable which should be
+capable of managing the different tasks using command line arguments. The name
+of the arguments, and their restrictions are up to you.
+
+About the other two tasks:
+Task 3
+
+
+
+a)make sure that if we have already searched for something, you don’t request it again, showing the last time of the search.
+
+
+
+(virtualenv) macbook01➜ src ᐅ python main.py search 'luke sky'
+Name: Luke Skywalker
+Height: 172
+Mass: 77
+Birth Year: 19BBY
+
+
+
+cached: 2020-12-19 18:29:48.685572
+
+
+
+(virtualenv) macbook01➜ src ᐅ python main.py search 'luke sky' --world
+Name: Luke Skywalker
+Height: 172
+Mass: 77
+Birth Year: 19BBY
+
+
+
+Homeworld
+----------------
+Name: Tatooine
+Population: 200000
+On Tatooine, 1 year on earth is 0.83 years and 1 day 0.96 days
+
+
+
+cached: 2020-12-19 18:42:10.792764
+
+
+
+b)Provide a method to clean the cache
+
+
+
+(virtualenv) macbook01➜ src ᐅ python main.py cache --clean
+removed cache
+
+
+
+Task 4
+
+
+
+Provide a visualization which includes
+• The searches made
+• The result
+• Time of the search
+Provided that the user has not cleaned their cache beforehand.
+
+
+python main.py search 'luke sky'
+python main.py search 'luke sky' --world
+python main.py cache --clean
